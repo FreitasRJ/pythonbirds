@@ -168,5 +168,3 @@ while True:
         car.motor.acelerar()            
     elif acao == '0':
         car.motor.frear()
-
-

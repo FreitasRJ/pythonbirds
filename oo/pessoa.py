@@ -32,9 +32,3 @@ print(renzo.olhos)
 print(Pessoa.metodo_estatico(), luciano.metodo_estatico())
 print(Pessoa.nome_e_atributos_de_classes(), luciano.nome_e_atributos_de_classes())
 
-
-
-
-
-
-
