@@ -19,7 +19,16 @@ class Pessoa:
     def nome_e_atributos_de_classes(cls): # usa-se cls no lugar da palavra class e refere-se ao nome da classe
         return f'{cls} - olhos {cls.olhos}'
 
-renzo = Pessoa()
+# Sobre escrita de atributos de dados
+class Homem(Pessoa):
+    pass
+
+class Mutante(Pessoa):
+    olhos = 3
+    # utilizando o mesmo nome do atributo o novo valor sobreescreve o da classe pai Pessoa
+    
+
+renzo = Mutante()
 luciano = Pessoa()
 renzo.nome = "Renzo"
 luciano.nome = "Luciano"
@@ -27,8 +36,9 @@ print(renzo.nome)
 a =  renzo
 print(renzo.__dict__) # mostra as estancias da classe contantes em def __init__
 print(renzo.olhos)
-Pessoa.olhos = 3
+#Pessoa.olhos = 3
 print(renzo.olhos)
 print(Pessoa.metodo_estatico(), luciano.metodo_estatico())
 print(Pessoa.nome_e_atributos_de_classes(), luciano.nome_e_atributos_de_classes())
 
+print(renzo.olhos) # tenta encontrar na classe Homem, depois na classe pai Pessoa e depois no objeto.
