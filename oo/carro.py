@@ -155,16 +155,19 @@ class Direcao:
 # Teste
 car = Carro(Direcao(),Motor())
 
-while True:
+if __name__== '__main__':
 
-    print(f'Direção: {car.calcular_direcao():<5}  -  Velocidade: {car.calcular_velocidade():>3}    ', end="")
-    acao = input()
-
-    if acao == '4':
-        car.direcao.girar_a_esquerda()            
-    elif acao == '6':
-        car.direcao.girar_a_direita()
-    elif acao == ' ':
-        car.motor.acelerar()            
-    elif acao == '0':
-        car.motor.frear()
+    while True:
+    
+        print(f'Direção: {car.calcular_direcao():<5}  -  Velocidade: {car.calcular_velocidade():>3}    ', end="")
+        acao = input()
+    
+        if acao == '4':
+            car.direcao.girar_a_esquerda()            
+        elif acao == '6':
+            car.direcao.girar_a_direita()
+        elif acao == ' ':
+            car.motor.acelerar()            
+        elif acao == '0':
+            car.motor.frear()
+    
