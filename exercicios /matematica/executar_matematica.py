@@ -1,3 +1,3 @@
-import matematica.mat
 
-print(matematica.mat.soma(4,5))
+import mat
+print(mat.soma(4,5))
